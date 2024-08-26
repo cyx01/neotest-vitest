@@ -61,7 +61,7 @@ local function hasVitestDependency(path)
     return false
   end
 
-  return hasVitestDependencyInJson(packageJsonContent) or hasRootProjectVitestDependency()
+  return hasRootProjectVitestDependency() or hasVitestDependencyInJson(packageJsonContent)
 end
 
 adapter.root = function(path)
